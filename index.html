@@ -1,0 +1,3566 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alberto Watches | Swiss Luxury Timepieces</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&amp;family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<body class="bg-[#0a0807] text-gray-200 antialiased selection:bg-[#d8b477] selection:text-black">
+<!-- TOP UTILITY BAR -->
+<div class="bg-[#050403] border-b border-[#d8b477]/20 py-2 text-xs text-[#b99a6a] tracking-widest uppercase">
+<div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+<div class="flex items-center space-x-6">
+<span><i class="fa-solid fa-location-dot text-[#d8b477] mr-1"></i> Geneva • Paris • New York</span>
+<span class="hidden md:inline"><i class="fa-solid fa-shield-halved text-[#d8b477] mr-1"></i> International 5-Year Guarantee</span>
+</div>
+<div class="flex items-center space-x-6">
+<a class="hover:text-[#ead4ae] transition" href="#"><i class="fa-solid fa-phone text-[#d8b477] mr-1"></i> VIP Concierge</a>
+<span class="text-gray-600">|</span>
+<button class="hover:text-[#ead4ae] transition flex items-center" onclick="toggleCartModal()">
+<i class="fa-solid fa-bag-shopping text-[#d8b477] mr-1.5"></i> Bag (<span id="cart-count">2</span>)
+                </button>
+</div>
+</div>
+</div>
+</head>
+<body>
+<!-- HEADER & NAVBAR CONTAINER -->
+<header class="sticky top-0 z-50 shadow-2xl">
+<nav class="alberto-navbar py-4 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<!-- ALBERTO BRANDING LOGO (WITH CUSTOM CSS SPECIFIED) -->
+<a class="alberto-logo group" href="#">
+<div class="a-logo relative">
+<svg class="transition-transform duration-500 group-hover:scale-105" viewbox="0 0 100 100">
+<!-- SVG MONOGRAM BASED ON USER CSS -->
+<path class="left-arc" d="M 25,20 C 10,35 10,65 25,80"></path>
+<path class="outer-arc" d="M 75,20 C 90,35 90,65 75,80"></path>
+<path class="sweep" d="M 15,68 C 30,82 70,82 85,68"></path>
+<text class="main-a-text" x="32" y="72">A</text>
+<line class="a-cross" x1="28" x2="72" y1="58" y2="58"></line>
+</svg>
+</div>
+<div class="logo-divider hidden sm:block"></div>
+<div class="logo-text hidden sm:block">
+<h1>ALBERTO</h1>
+<p>LUXURY •WATCHES</p>
+</div>
+</a>
+<!-- DESKTOP NAVIGATION MENU (WHITE LINKS, BOLD FONT) -->
+<div class="hidden lg:flex items-center space-x-2 flex-nowrap">
+<div class="nav-item">
+<a class="nav-link active" href="#" onclick="filterProducts('all'); window.scrollTo({top:0,behavior:'smooth'}); return false;">Home</a>
+</div>
+<!-- DROPDOWN MENU WITH HIGH Z-INDEX FIX OVER SLIDER -->
+<div class="nav-item dropdown-group relative">
+<a class="nav-link flex items-center gap-1" href="#collections">
+                            Brands <i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-70"></i>
+</a>
+<!-- DROPDOWN CONTAINER -->
+<div class="dropdown-menu-custom">
+<div class="px-4 py-2 text-[10px] uppercase font-bold text-[#b99a6a] tracking-widest border-b border-[#d8b477]/20 mb-1">
+                                Brands
+                            </div>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Rolex'); return false;">
+<span>Rolex</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Michael Kors'); return false;">
+<span>Michael Kors</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Omega'); return false;">
+<span>Omega</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Casio'); return false;">
+<span>Casio</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Seiko'); return false;">
+<span>Seiko</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Tissot'); return false;">
+<span>Tissot</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Citizen'); return false;">
+<span>Citizen</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Bulova'); return false;">
+<span>Bulova</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Orient'); return false;">
+<span>Orient</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Apple'); return false;">
+<span>Apple</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'Huawei'); return false;">
+<span>Huawei</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('brand', 'TAG Heuer'); return false;">
+<span>TAG Heuer</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+</div>
+</div>
+<div class="nav-item dropdown-group relative">
+<a class="nav-link flex items-center gap-1" href="#collections">
+                            Category<i class="fa-solid fa-chevron-down text-[10px] ml-0.5 opacity-70"></i>
+</a>
+<!-- DROPDOWN CONTAINER -->
+<div class="dropdown-menu-custom">
+<div class="px-4 py-2 text-[10px] uppercase font-bold text-[#b99a6a] tracking-widest border-b border-[#d8b477]/20 mb-1">
+                                Select Collections
+                            </div>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Men\'s'); return false;">
+<span>Men's</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Women\'s'); return false;">
+<span>Women's</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Luxury'); return false;">
+<span>Luxury</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Vintage'); return false;">
+<span>Vintage</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Essential'); return false;">
+<span>Essential</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+<a class="block px-5 py-2.5 text-xs text-gray-200 hover:bg-[#d8b477]/10 hover:text-[#ead4ae] transition flex items-center justify-between" href="#collections" onclick="filterProducts('category', 'Smart Watches'); return false;">
+<span>Smart Watches</span>
+<i class="fa-solid fa-arrow-right text-[10px] opacity-40"></i>
+</a>
+</div>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="#technology">Technology</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="#gallery">Gallery</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="#store-locator">Store Locator</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="#about">About Us</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="#contact">Contact Us</a>
+</div>
+</div>
+<!-- RIGHT ACTION BUTTONS -->
+<div class="flex items-center space-x-4">
+<div class="visitor-pill" id="visitor-pill" title="Total visitors" style="display:none"><i class="fa-regular fa-eye"></i><span id="visitor-count">0</span><small class="hidden sm:inline">Visitors</small></div>
+<button class="p-2 text-white hover:text-[#d8b477] transition" onclick="openSearchModal()">
+<i class="fa-solid fa-magnifying-glass text-lg"></i>
+</button>
+<button class="p-2 text-white hover:text-[#d8b477] transition relative" onclick="toggleCartModal()">
+<i class="fa-solid fa-bag-shopping text-lg"></i>
+<span class="absolute top-1 right-0 w-2 h-2 bg-[#d8b477] rounded-full"></span>
+</button>
+<!-- Mobile Hamburger Toggle Button -->
+<button class="lg:hidden p-2 text-white hover:text-[#d8b477] focus:outline-none" onclick="toggleMobileMenu()">
+<i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+</button>
+</div>
+</div>
+<!-- FIXED MOBILE MENU DROPDOWN -->
+<div class="hidden lg:hidden border-t border-[#d8b477]/20 mt-4 pt-4 pb-4 px-2 space-y-2 bg-[#0d0a08] rounded-b-lg" id="mobile-menu">
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#">Home</a>
+<!-- MOBILE ACCORDION / DROPDOWN 1 -->
+<div>
+<button class="w-full flex justify-between items-center py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" onclick="toggleMobileSubmenu('mobile-brands')">
+<span>Brands</span>
+<i class="fa-solid fa-chevron-down text-xs text-[#d8b477]"></i>
+</button>
+<div class="hidden pl-6 pr-2 py-2 space-y-1 bg-[#15100c] rounded mt-1" id="mobile-brands">
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Rolex'); closeMobileMenu(); return false;">Rolex</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Michael Kors'); closeMobileMenu(); return false;">Michael Kors</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Omega'); closeMobileMenu(); return false;">Omega</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Casio'); closeMobileMenu(); return false;">Casio</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Seiko'); closeMobileMenu(); return false;">Seiko</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Tissot'); closeMobileMenu(); return false;">Tissot</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Citizen'); closeMobileMenu(); return false;">Citizen</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Bulova'); closeMobileMenu(); return false;">Bulova</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Orient'); closeMobileMenu(); return false;">Orient</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Apple'); closeMobileMenu(); return false;">Apple</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'Huawei'); closeMobileMenu(); return false;">Huawei</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('brand', 'TAG Heuer'); closeMobileMenu(); return false;">TAG Heuer</a>
+</div>
+</div>
+<!-- MOBILE ACCORDION / DROPDOWN 2 -->
+<div>
+<button class="w-full flex justify-between items-center py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" onclick="toggleMobileSubmenu('mobile-category')">
+<span>Category</span>
+<i class="fa-solid fa-chevron-down text-xs text-[#d8b477]"></i>
+</button>
+<div class="hidden pl-6 pr-2 py-2 space-y-1 bg-[#15100c] rounded mt-1" id="mobile-category">
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Men\'s'); closeMobileMenu(); return false;">Men's</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Women\'s'); closeMobileMenu(); return false;">Women's</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Luxury'); closeMobileMenu(); return false;">Luxury</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Vintage'); closeMobileMenu(); return false;">Vintage</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Essential'); closeMobileMenu(); return false;">Essential</a>
+<a class="block py-1.5 text-xs text-gray-300 hover:text-[#ead4ae]" href="#collections" onclick="filterProducts('category', 'Smart Watches'); closeMobileMenu(); return false;">Smart Watches</a>
+</div>
+</div>
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#">Technology</a>
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#store-locator" onclick="closeMobileMenu()">Store Locator</a>
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#about" onclick="closeMobileMenu()">About Us</a>
+<a class="block py-2 px-4 text-white font-semibold hover:bg-[#d8b477]/10 rounded" href="#contact" onclick="closeMobileMenu()">Contact Us</a>
+</div>
+</nav>
+</header>
+<!-- HERO CAROUSEL SECTION -->
+<section class="carousel-container relative bg-[#070605] overflow-hidden min-h-[85vh] flex items-center" id="hero">
+<!-- Background Ambient Glow -->
+<div class="absolute top-1/2 -left-32 w-96 h-96 bg-[#d8b477]/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#8e744f]/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- SLIDE 1 -->
+<div class="carousel-slide active w-full py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6 carousel-inner">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#d8b477]/40 bg-[#d8b477]/10 text-[#d8a06f;] text-xs font-semibold tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-[#d8a06f] animate-pulse"></span> Flagship 2026 Edition
+                    </div>
+<h5 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        The Imperial <br/>
+<span class="text-[#d8a06f]">Tourbillon III</span>
+</h5>
+<p class="text-gray-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                        Forged from 18k Rose Gold with a flying tourbillon movement. Engineered over 400 hours of precision Swiss watchmaking mastery.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="gold-button px-8 py-4 rounded-md text-sm font-bold" onclick="scrollToCatalog()"><a href="#cards">
+                            Explore Collection</a>
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 flex justify-center relative">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-[#d8b477]/30 to-[#8e744f]/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition"></div>
+<img alt="Alberto Imperial Tourbillon" class="relative rounded-2xl border border-[#d8b477]/30 shadow-2xl max-h-[500px] object-cover" onerror="this.src='https://placehold.co/600x600/15100c/d8b477?text=Alberto+Tourbillon'" src="images/efeccd38de813b2db7330a98823d28d7.jpg"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 2 -->
+<div class="carousel-slide w-full py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6 carousel-inner">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#d8b477]/40 bg-[#dd8b477]/10 text-[#d8a06f;] text-xs font-semibold tracking-widest uppercase">
+                        Exclusive Chronograph
+                    </div>
+<h5 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Monaco Royal <br/>
+<span class="text-[#d8a06f;]">Skeleton Automatic</span>
+</h5>
+<p class="text-gray-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                        Unveil the intricate dance of gears. Transparent sapphire crystal casing revealing an intricate 28,800 vph beating balance wheel.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="gold-button px-8 py-4 rounded-md text-sm font-bold" onclick="scrollToCatalog()">
+                          <a href="#about">  View Specification</a>
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 flex justify-center relative">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-[#d8b477]/30 to-[#8e744f]/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition"></div>
+<img alt="Alberto Monaco Skeleton" class="relative rounded-2xl border border-[#d8b477]/30 shadow-2xl max-h-[500px] object-cover" onerror="this.src='https://placehold.co/600x600/15100c/d8b477?text=Monaco+Skeleton'" src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 3 -->
+<div class="carousel-slide w-full py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-6 carousel-inner">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#d8b477]/40 bg-[#d8b477]/10 text-[#d8a06f;] text-xs font-semibold tracking-widest uppercase">
+                        Nautical Elegance
+                    </div>
+<h5 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        ROYAL DIAMOND<br/>
+<span class="text-[#d8a06f;]">Imperial Noir
+
+                         18K Gold &amp; Diamond Edition</span>
+</h5>
+<p class="text-gray-300 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+                       Exquisite 18K gold casing paired with a deep obsidian black dial, adorned with hand-set diamond hour markers. A timeless symbol of pure royalty and elegance.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="gold-button px-8 py-4 rounded-md text-sm font-bold" onclick="scrollToCatalog()">
+                           <a href="#cards"> Explore Gold Edition</a>
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 flex justify-center relative">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-[#d8b477]/30 to-[#8e744f]/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition"></div>
+<img alt="Alberto Ocean Master" class="relative rounded-2xl border border-[#d8b477]/30 shadow-2xl max-h-[500px] object-cover" onerror="this.src='https://placehold.co/600x600/15100c/d8b477?text=Ocean+Master'" src="images/5ed550197983bca5d34ab28f3bb0bd77.jpg"/>
+</div>
+</div>
+</div>
+</div>
+<!-- CAROUSEL CONTROLS -->
+<div id="cards" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center space-x-3 z-20">
+<button class="w-10 h-10 rounded-full border border-[#d8b477]/40 bg-black/50 text-[#d8b477] hover:bg-[#d8b477] hover:text-black transition flex items-center justify-center" onclick="prevSlide()">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+<div class="flex space-x-2">
+<span class="slide-indicator w-8 h-1 bg-[#d8b477] rounded-full cursor-pointer" onclick="goToSlide(0)"></span>
+<span class="slide-indicator w-3 h-1 bg-gray-600 rounded-full cursor-pointer" onclick="goToSlide(1)"></span>
+<span class="slide-indicator w-3 h-1 bg-gray-600 rounded-full cursor-pointer" onclick="goToSlide(2)"></span>
+</div>
+<button class="w-10 h-10 rounded-full border border-[#d8b477]/40 bg-black/50 text-[#d8b477] hover:bg-[#d8b477] hover:text-black transition flex items-center justify-center" onclick="nextSlide()">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+</div>
+</section>
+<!-- //___________cards_________// -->
+<div class="container" id="collections" style="padding-top:40px">
+<div id="filter-status" class="hidden" style="display:none;align-items:center;justify-content:space-between;margin-bottom:20px;color:#d8a06f;font-family:Montserrat,sans-serif;"><span id="filter-label"></span><button type="button" onclick="filterProducts('all')" style="border:1px solid rgba(216,160,111,.4);color:#d8a06f;background:transparent;padding:6px 14px;border-radius:6px;">Show all</button></div>
+<div class="row g-4" id="product-grid">
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Rolex" data-gender="Men's" data-category="Luxury" data-image="images/a2957e4e-15dc-4e5a-8526-9127a626e41c.png" data-name="Royal Master Chronograph" data-price="$12,400" data-product-id="1">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/a2957e4e-15dc-4e5a-8526-9127a626e41c.png"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Rolex</p>
+<!-- Product Title -->
+<h3 class="card-title">Rolex Master Chronograph</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$12,400</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(1); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- //2nd cars// -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Rolex" data-gender="Men's" data-category="Luxury" data-image="images/classic-watches-day-date-naviguation-square.avif" data-name="Royal Gold Skeleton" data-price="$15,800" data-product-id="2">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/classic-watches-day-date-naviguation-square.avif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Rolex</p>
+<!-- Product Title -->
+<h3 class="card-title">Rolex Gold Skeleton</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$15,800</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(2); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Rolex" data-gender="Women's" data-category="Luxury" data-image="images/1100112246_PREVIEW.jfif" data-name="Royal Heritage Automatic" data-price="$11,950" data-product-id="3">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/1100112246_PREVIEW.jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Rolex</p>
+<!-- Product Title -->
+<h3 class="card-title">Rolex Heritage Automatic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$11,950</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(3); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Michael Kors" data-gender="Men's" data-category="Luxury" data-image="images/images.jfif" data-name="Michael Kors Runway Gold" data-price="$395" data-product-id="4">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images.jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Michael Kors</p>
+<!-- Product Title -->
+<h3 class="card-title">Michael Kors Runway Gold</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$395</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(4); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Michael Kors" data-gender="Women's" data-category="Luxury" data-image="images/Michael-Kors-Women-s-Slim-Runway-Gold-Tone-Watch-42mm-MK3179_fc008235-0874-47f4-a161-3405462e3f72.a6869ce7c2d6659b57db947cca99e0e6.avif" data-name="Michael Kors Lexington" data-price="$425" data-product-id="5">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/Michael-Kors-Women-s-Slim-Runway-Gold-Tone-Watch-42mm-MK3179_fc008235-0874-47f4-a161-3405462e3f72.a6869ce7c2d6659b57db947cca99e0e6.avif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Michael Kors</p>
+<!-- Product Title -->
+<h3 class="card-title">Michael Kors Lexington</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$425</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(5); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 6card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Michael Kors" data-gender="Men's" data-category="Luxury" data-image="images/WhatsApp_Image_2025-12-06_at_3.16.24_PM_2.jpg" data-name="Michael Kors Parker Elite" data-price="$450" data-product-id="6">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/WhatsApp_Image_2025-12-06_at_3.16.24_PM_2.jpg"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Michael Kors</p>
+<!-- Product Title -->
+<h3 class="card-title">Michael Kors Parker Elite</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$450</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(6); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 7card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Omega" data-gender="Women's" data-category="Luxury" data-image="images/images (1).jfif" data-name="Omega Seamaster Classic" data-price="$7,900" data-product-id="7">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (1).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Omega</p>
+<!-- Product Title -->
+<h3 class="card-title">Omega Seamaster Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$7,900</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(7); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 8card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Omega" data-gender="Men's" data-category="Luxury" data-image="images/images (5).jfif" data-name="Omega Speedmaster Noir" data-price="$8,750" data-product-id="8">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (5).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Omega</p>
+<!-- Product Title -->
+<h3 class="card-title">Omega Speedmaster Noir</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$8,750</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(8); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 9card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Omega" data-gender="Men's" data-category="Luxury" data-image="images/images (4).jfif" data-name="Omega Constellation Gold" data-price="$10,900" data-product-id="9">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (4).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Luxury • Omega</p>
+<!-- Product Title -->
+<h3 class="card-title">Omega Constellation Gold</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$10,900</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(9); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 10card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Casio" data-gender="Men's" data-category="Vintage" data-image="images/a168WA-1wd-digital-alram-watch.jpg" data-name="Casio Vintage Digital" data-price="$95" data-product-id="10">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/a168WA-1wd-digital-alram-watch.jpg"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Casio</p>
+<!-- Product Title -->
+<h3 class="card-title">Casio Vintage Digital</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$95</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(10); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 11card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Casio" data-gender="Men's" data-category="Vintage" data-image="images/images (3).jfif" data-name="Casio Vintage Gold" data-price="$125" data-product-id="11">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (3).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Casio</p>
+<!-- Product Title -->
+<h3 class="card-title">Casio Vintage Gold</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$125</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(11); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- //12nd cars// -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Casio" data-gender="Women's" data-category="Vintage" data-image="images/images (2).jfif" data-name="Casio Retro Classic" data-price="$110" data-product-id="12">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (2).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Casio</p>
+<!-- Product Title -->
+<h3 class="card-title">Casio Retro Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$110</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(12); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 13card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Seiko" data-gender="Men's" data-category="Vintage" data-image="images/ypewst7wpdrh-k1k0cpzpvkql3c5l4ntejt8u-ExtraLarge.jpg" data-name="Seiko Presage Classic" data-price="$520" data-product-id="13">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/ypewst7wpdrh-k1k0cpzpvkql3c5l4ntejt8u-ExtraLarge.jpg"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Seiko</p>
+<!-- Product Title -->
+<h3 class="card-title">Seiko Presage Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$520</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(13); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!--14card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Seiko" data-gender="Women's" data-category="Vintage" data-image="images/images (7).jfif" data-name="Seiko 5 Automatic" data-price="$390" data-product-id="14">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (7).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Seiko</p>
+<!-- Product Title -->
+<h3 class="card-title">Seiko 5 Automatic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$390</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(14); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 15card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Seiko" data-gender="Men's" data-category="Vintage" data-image="images/images (6).jfif" data-name="Seiko Heritage Silver" data-price="$475" data-product-id="15">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (6).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Seiko</p>
+<!-- Product Title -->
+<h3 class="card-title">Seiko Heritage Silver</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$475</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(15); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 16card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Tissot" data-gender="Men's" data-category="Vintage" data-image="images/images (8).jfif" data-name="Tissot PRX Classic" data-price="$695" data-product-id="16">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (8).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Tissot</p>
+<!-- Product Title -->
+<h3 class="card-title">Tissot PRX Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$695</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(16); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 17card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Tissot" data-gender="Women's" data-category="Vintage" data-image="images/images (9).jfif" data-name="Tissot Le Locle" data-price="$780" data-product-id="17">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (9).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Tissot</p>
+<!-- Product Title -->
+<h3 class="card-title">Tissot Le Locle</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$780</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(17); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 18card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Tissot" data-gender="Men's" data-category="Vintage" data-image="images/images (10).jfif" data-name="Tissot Gentleman" data-price="$725" data-product-id="18">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (10).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Vintage • Tissot</p>
+<!-- Product Title -->
+<h3 class="card-title">Tissot Gentleman</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$725</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(18); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 19card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Citizen" data-gender="Men's" data-category="Essential" data-image="images/images (11).jfif" data-name="Citizen Eco-Drive" data-price="$395" data-product-id="19">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (11).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Citizen</p>
+<!-- Product Title -->
+<h3 class="card-title">Citizen Eco-Drive</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$395</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(19); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 20card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Citizen" data-gender="Women's" data-category="Essential" data-image="images/images (12).jfif" data-name="Citizen Tsuyosa" data-price="$450" data-product-id="20">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (12).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Citizen</p>
+<!-- Product Title -->
+<h3 class="card-title">Citizen Tsuyosa</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$450</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(20); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 21card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Citizen" data-gender="Men's" data-category="Essential" data-image="images/images (13).jfif" data-name="Citizen Classic Date" data-price="$375" data-product-id="21">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (13).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Citizen</p>
+<!-- Product Title -->
+<h3 class="card-title">Citizen Classic Date</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$375</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(21); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- //22nd cars// -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Bulova" data-gender="Men's" data-category="Essential" data-image="images/images (14).jfif" data-name="Bulova Classic Automatic" data-price="$575" data-product-id="22">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (14).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Bulova</p>
+<!-- Product Title -->
+<h3 class="card-title">Bulova Classic Automatic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$575</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(22); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 23card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Bulova" data-gender="Women's" data-category="Essential" data-image="images/images (15).jfif" data-name="Bulova Marine Star" data-price="$625" data-product-id="23">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (15).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Bulova</p>
+<!-- Product Title -->
+<h3 class="card-title">Bulova Marine Star</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$625</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(23); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 24card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Bulova" data-gender="Men's" data-category="Essential" data-image="images/images (16).jfif" data-name="Bulova Sutton Gold" data-price="$550" data-product-id="24">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (16).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Bulova</p>
+<!-- Product Title -->
+<h3 class="card-title">Bulova Sutton Gold</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$550</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(24); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 25card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Orient" data-gender="Men's" data-category="Essential" data-image="images/images (17).jfif" data-name="Orient Bambino Classic" data-price="$310" data-product-id="25">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (17).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Orient</p>
+<!-- Product Title -->
+<h3 class="card-title">Orient Bambino Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$310</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(25); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 26card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Orient" data-gender="Women's" data-category="Essential" data-image="images/images (18).jfif" data-name="Orient Kamasu Automatic" data-price="$375" data-product-id="26">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (18).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Orient</p>
+<!-- Product Title -->
+<h3 class="card-title">Orient Kamasu Automatic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$375</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(26); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 27card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Orient" data-gender="Men's" data-category="Essential" data-image="images/images (19).jfif" data-name="Orient Contemporary" data-price="$340" data-product-id="27">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (19).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Essential • Orient</p>
+<!-- Product Title -->
+<h3 class="card-title">Orient Contemporary</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$340</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(27); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 28card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Apple" data-gender="Men's" data-category="Smartwatches" data-image="images/images (20).jfif" data-name="Apple Watch Series" data-price="$499" data-product-id="28">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (20).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Apple</p>
+<!-- Product Title -->
+<h3 class="card-title">Apple Watch Series</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$499</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(28); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 29card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Apple" data-gender="Women's" data-category="Smartwatches" data-image="images/images (21).jfif" data-name="Apple Watch Ultra" data-price="$799" data-product-id="29">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (21).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Apple</p>
+<!-- Product Title -->
+<h3 class="card-title">Apple Watch Ultra</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$799</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(29); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!--30card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Apple" data-gender="Men's" data-category="Smartwatches" data-image="images/images (22).jfif" data-name="Apple Watch Classic" data-price="$449" data-product-id="30">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (22).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Apple</p>
+<!-- Product Title -->
+<h3 class="card-title">Apple Watch Classic</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$449</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(30); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 31card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Huawei" data-gender="Men's" data-category="Smartwatches" data-image="images/images (25).jfif" data-name="Huawei Watch GT" data-price="$299" data-product-id="31">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (25).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Huawei</p>
+<!-- Product Title -->
+<h3 class="card-title">Huawei Watch GT</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$299</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(31); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 32 card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Huawei" data-gender="Women's" data-category="Smartwatches" data-image="images/images (24).jfif" data-name="Huawei Watch Elegant" data-price="$329" data-product-id="32">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (24).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Huawei</p>
+<!-- Product Title -->
+<h3 class="card-title">Huawei Watch Elegant</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$329</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(32); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 33card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="Huawei" data-gender="Men's" data-category="Smartwatches" data-image="images/images (23).jfif" data-name="Huawei Watch Pro" data-price="$399" data-product-id="33">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (23).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • Huawei</p>
+<!-- Product Title -->
+<h3 class="card-title">Huawei Watch Pro</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$399</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(33); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 34 card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="TAG Heuer" data-gender="Men's" data-category="Smartwatches" data-image="images/images (26).jfif" data-name="TAG Heuer Connected" data-price="$1,850" data-product-id="34">
+<div class="card-image-container">
+<!-- Badge -->
+<span class="card-badge">Limited Edition</span>
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (26).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • TAG Heuer</p>
+<!-- Product Title -->
+<h3 class="card-title">TAG Heuer Connected</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.8)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$1,850</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(34); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 35card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="TAG Heuer" data-gender="Women's" data-category="Smartwatches" data-image="images/images (27).jfif" data-name="TAG Heuer Connected Sport" data-price="$2,050" data-product-id="35">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (27).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • TAG Heuer</p>
+<!-- Product Title -->
+<h3 class="card-title">TAG Heuer Connected Sport</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.9)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$2,050</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(35); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 35 card -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="luxury-card" data-brand="TAG Heuer" data-gender="Men's" data-category="Smartwatches" data-image="images/images (28).jfif" data-name="TAG Heuer Connected Elite" data-price="$2,250" data-product-id="36">
+<div class="card-image-container">
+<!-- Badge -->
+<!-- Wishlist Button -->
+<button aria-label="Add to wishlist" class="wishlist-btn">
+<i class="fa-regular fa-heart"></i>
+</button>
+<!-- Product Image -->
+<img alt="Watch" class="card-img" onerror="this.src='https://placehold.co/400x400/15100c/d8a06f?text=Alberto+Watch'" src="images/images (28).jfif"/>
+</div>
+<!-- CARD CONTENT -->
+<div class="card-content">
+<!-- Category -->
+<p class="card-category">Smartwatches • TAG Heuer</p>
+<!-- Product Title -->
+<h3 class="card-title">TAG Heuer Connected Elite</h3>
+<!-- Rating Stars -->
+<div class="card-rating">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star-half-stroke"></i>
+<span class="rating-text">(4.7)</span>
+</div>
+<!-- Price & Action Button -->
+<div class="card-footer">
+<div class="price-box">
+<span class="price-label">Price</span>
+<span class="price-amount">$2,250</span>
+</div>
+<!-- Add to Cart Button -->
+<button class="cart-btn" onclick="openProductModal(36); return false;" type="button"><i class="fa-solid fa-bag-shopping"></i> Add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="watch-modal" id="feedbackModal">
+<div class="watch-modal-overlay" onclick="closeFeedbackModal()"></div>
+<div aria-modal="true" class="feedback-dialog" role="dialog">
+<button class="watch-modal-close" onclick="closeFeedbackModal()" type="button">×</button>
+<div class="feedback-icon"><i class="fa-regular fa-comment-dots"></i></div>
+<p class="modal-category">ALBERTO WATCHES</p><h2>Your Feedback</h2>
+<p class="feedback-product">For <strong id="feedbackProductName">Selected Watch</strong></p>
+<div class="feedback-stars" id="feedbackStars">
+<button data-rating="1" type="button"><i class="fa-solid fa-star"></i></button>
+<button data-rating="2" type="button"><i class="fa-solid fa-star"></i></button>
+<button data-rating="3" type="button"><i class="fa-solid fa-star"></i></button>
+<button data-rating="4" type="button"><i class="fa-solid fa-star"></i></button>
+<button data-rating="5" type="button"><i class="fa-solid fa-star"></i></button></div>
+<textarea id="feedbackText" placeholder="Tell us what you think about this watch..." rows="4"></textarea>
+<button class="modal-add-btn feedback-submit" onclick="submitFeedback()" type="button">Submit Feedback</button>
+</div></div><div aria-hidden="true" class="watch-modal" id="productModal">
+<div class="watch-modal-overlay" onclick="closeProductModal()"></div>
+<div aria-modal="true" class="watch-modal-dialog" role="dialog">
+<button class="watch-modal-close" onclick="closeProductModal()" type="button">×</button>
+<div class="watch-modal-grid">
+<div class="modal-image-wrap"><img alt="Watch" id="modalProductImage" src=""/></div>
+<div class="modal-product-info">
+<span class="modal-badge" id="modalProductBadge"></span>
+<p class="modal-category" id="modalProductCategory"></p>
+<h2 id="modalProductTitle"></h2>
+<div class="modal-rating" id="modalProductRating"></div>
+<p class="modal-description" id="modalProductDescription"></p>
+<div class="modal-specs">
+<div><span>Brand</span><strong id="modalProductBrand"></strong></div>
+<div><span>Category</span><strong id="modalProductCollection"></strong></div>
+<div><span>Movement</span><strong id="modalProductMovement"></strong></div>
+<div><span>Guarantee</span><strong>5 Years International</strong></div>
+</div>
+<div class="modal-price-row"><div><small>Price</small><strong id="modalProductPrice"></strong></div>
+<button class="modal-add-btn" id="modalAddButton" type="button"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button></div>
+<button class="feedback-open-btn" onclick="openFeedbackModal()" type="button"><i class="fa-regular fa-comment-dots"></i> Share Your Feedback</button>
+</div></div></div></div><script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- TECHNOLOGY -->
+
+<!-- ================= HERO ================= -->
+<div id="technology">
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                THE TECHNOLOGY BEHIND ALBERTO
+            </div>
+
+
+            <h1>
+                CRAFTED WITH
+                <span>PRECISION</span>
+            </h1>
+
+
+            <p>
+                At Alberto Watches, technology and craftsmanship
+                come together to deliver more than just a watch —
+                it's a legacy of innovation, accuracy and timeless
+                performance.
+            </p>
+
+
+            <a href="#" class="discover-btn">
+
+                DISCOVER MORE
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= TECHNOLOGY FEATURES ================= -->
+
+    <section class="features">
+
+
+        <!-- SWISS MOVEMENT -->
+
+        <div class="feature-card">
+
+            <div class="feature-content">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </div>
+
+                <h2>
+                    SWISS MOVEMENT
+                </h2>
+
+                <p>
+                    Powered by precise Swiss movements
+                    for unmatched accuracy and reliability.
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- POWER RESERVE -->
+
+        <div class="feature-card">
+
+            <div class="feature-content">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <h2>
+                    POWER RESERVE
+                </h2>
+
+                <p>
+                    Long-lasting energy for
+                    your every moment.
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WATER RESISTANCE -->
+
+        <div class="feature-card">
+
+            <div class="feature-content">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                </div>
+
+                <h2>
+                    WATER RESISTANCE
+                </h2>
+
+                <p>
+                    Built to perform
+                    in any condition.
+                </p>
+
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+</div>
+
+
+<!-- store locator -->
+ <div class="wrap" id="store-locator">
+
+
+
+<section class="hero2">
+
+  <div class="label">ALBERTO WATCHES</div>
+
+  <h1>Find Your Nearest Store</h1>
+
+  <p class="sub">
+    Experience Alberto craftsmanship in person.
+  </p>
+
+</section>
+
+
+<section class="locator">
+
+
+<!-- STORES -->
+
+<aside class="sidebar">
+
+  <div class="title">OUR LOCATIONS</div>
+
+  <input
+    type="text"
+    placeholder="Search city..."
+    onkeyup="searchStores(this.value)"
+  >
+
+
+  <div id="stores">
+
+
+    <div class="store" onclick="selectStore('karachi')">
+      <i class="open">OPEN</i>
+      <b>Alberto Karachi</b>
+      <span>Clifton • Dolmen Mall</span>
+    </div>
+
+
+    <div class="store" onclick="selectStore('lahore')">
+      <i class="open">OPEN</i>
+      <b>Alberto Lahore</b>
+      <span>Gulberg • MM Alam Road</span>
+    </div>
+
+
+    <div class="store" onclick="selectStore('islamabad')">
+      <i class="open">OPEN</i>
+      <b>Alberto Islamabad</b>
+      <span>F-7 • Jinnah Super</span>
+    </div>
+
+
+    <div class="store" onclick="selectStore('dubai')">
+      <i class="open">OPEN</i>
+      <b>Alberto Dubai</b>
+      <span>Downtown • Dubai Mall</span>
+    </div>
+
+
+    <div class="store" onclick="selectStore('nigeria')">
+      <i class="open">OPEN</i>
+      <b>Alberto Nigeria</b>
+      <span>106 Close, Banana Island, Eti Osa 101003, Lagos</span>
+    </div>
+
+
+  </div>
+
+</aside>
+
+
+<!-- MAP -->
+
+<div class="map">
+
+  <div class="map-title">
+    STORE LOCATOR
+  </div>
+
+
+  <iframe
+    id="mapFrame"
+    src="https://www.google.com/maps?q=24.8138,67.0305&z=14&output=embed"
+    loading="lazy">
+  </iframe>
+
+
+  <div class="info">
+
+    <small>SELECTED LOCATION</small>
+
+    <h3 id="storeName">
+      Alberto Karachi
+    </h3>
+
+    <p id="storeAddress">
+      Clifton • Dolmen Mall<br>
+      Monday — Sunday · 10:00 — 22:00
+    </p>
+
+    <button
+      class="btn"
+      onclick="getDirections()">
+      GET DIRECTIONS →
+    </button>
+
+  </div>
+
+</div>
+
+</section>
+
+</div>
+<!-- GALLERY -->
+  <!-- ================= PRODUCTS ================= -->
+
+    <div class="product-grid container" id="gallery">
+
+
+        <!-- BIG CARD -->
+
+        <div class="product-card big skeleton">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/29 (2).jfif" alt="Aeron">
+
+            <div class="card-overlay">
+
+                <small>SKELETON COLLECTION</small>
+
+                <h2>AERON</h2>
+
+                <p>CH-3715R-BK</p>
+
+               
+            </div>
+
+        </div>
+
+
+        <!-- CARD -->
+
+        <div class="product-card classic">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/31.jfif" alt="Monarch">
+
+            <div class="card-overlay">
+
+                <small>CLASSIC COLLECTION</small>
+
+                <h2>MONARCH</h2>
+
+                <p>CH-4821G-BL</p>
+
+               
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD -->
+
+        <div class="product-card chronograph">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/32.jfif" alt="Velocity">
+
+            <div class="card-overlay">
+
+                <small>CHRONOGRAPH</small>
+
+                <h2>VELOCITY</h2>
+
+                <p>CH-3990R-BK</p>
+
+                
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD -->
+
+        <div class="product-card limited">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/33.jfif" alt="Noir">
+
+            <div class="card-overlay">
+
+                <small>LIMITED EDITION</small>
+
+                <h2>NOIR</h2>
+
+                <p>CH-5560R-BK</p>
+
+                
+
+            </div>
+
+        </div>
+
+
+        <!-- PROMO -->
+
+        <div class="product-card promo">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/34.jfif">
+
+            <div class="promo-text">
+
+                <h2>
+                    PRECISION<br>
+                    IN EVERY<br>
+                    DETAIL.
+                </h2>
+
+                <p>HANDCRAFTED<br>FOR GENERATIONS</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLASSIC -->
+
+        <div class="product-card classic">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/35.jfif">
+
+            <div class="card-overlay">
+
+                <small>CLASSIC</small>
+
+                <h2>IMPERIAL</h2>
+
+                <p>CH-2216G-WH</p>
+
+               
+
+            </div>
+
+        </div>
+
+
+        <!-- SKELETON -->
+
+        <div class="product-card skeleton">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/36.jfif">
+
+            <div class="card-overlay">
+
+                <small>SKELETON</small>
+
+                <h2>SPECTRA</h2>
+
+                <p>CH-3795R-BK</p>
+
+                
+
+            </div>
+
+        </div>
+
+
+        <!-- CHRONOGRAPH -->
+
+        <div class="product-card chronograph">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/37.jfif">
+
+            <div class="card-overlay">
+
+                <small>CHRONOGRAPH</small>
+
+                <h2>TITAN</h2>
+
+                <p>CH-5580R-BK</p>
+
+                
+            </div>
+
+        </div>
+<div class="product-card skeleton">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/39.jfif">
+
+            <div class="card-overlay">
+
+                <small>SKELETON</small>
+
+                <h2>SPECTRA</h2>
+
+                <p>CH-3795R-BK</p>
+
+                
+
+            </div>
+
+        </div>
+        <div class="product-card skeleton">
+
+            <img onerror="this.onerror=null;this.src='https://placehold.co/600x600/15100c/d8a06f?text=Alberto+Watch'" src="images/images (29).jfif">
+
+            <div class="card-overlay">
+
+                <small>SKELETON</small>
+
+                <h2>SPECTRA</h2>
+
+                <p>CH-3795R-BK</p>
+
+                
+
+            </div>
+
+        </div>
+    </div>
+    <!-- About us -->
+     <div id="about">
+    <!-- ================= OUR STORY ================= -->
+    <section class="story-section" id="story">
+
+        <div class="story-image">
+            <img src="images/about.jfif" alt="Watchmaking Craft">
+        </div>
+
+        <div class="story-content">
+
+            <span class="small-title">OUR PHILOSOPHY</span>
+
+            <h2>
+                CRAFTED WITH
+                <span>PURPOSE</span>
+            </h2>
+
+            <p>
+                Every Alberto timepiece begins with a passion for
+                precision and a respect for traditional watchmaking.
+                Each component is carefully selected and assembled
+                to create an experience that goes beyond appearance.
+            </p>
+
+            <p>
+                From the movement hidden beneath the dial to the
+                smallest finishing detail, our watches represent
+                the perfect balance between engineering, artistry
+                and individuality.
+            </p>
+
+            <div class="gold-line"></div>
+
+            <h4>PRECISION. HERITAGE. PASSION.</h4>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOURNEY ================= -->
+    <section class="journey-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">OUR JOURNEY</span>
+
+            <h2>
+                A LEGACY
+                <span>IN MOTION</span>
+            </h2>
+
+            <p>
+                A story shaped by craftsmanship, dedication
+                and an enduring respect for time.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <span class="year">1868</span>
+
+                <div class="circle"></div>
+
+                <h3>THE BEGINNING</h3>
+
+                <p>
+                    Our journey begins with a vision to
+                    create exceptional mechanical timepieces.
+                </p>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">1920</span>
+
+                <div class="circle"></div>
+
+                <h3>PRECISION FIRST</h3>
+
+                <p>
+                    A new era of precision and refined
+                    craftsmanship shaped our identity.
+                </p>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">1965</span>
+
+                <div class="circle"></div>
+
+                <h3>EXPANDING THE VISION</h3>
+
+                <p>
+                    Our designs reached a wider audience
+                    while preserving our traditional values.
+                </p>
+            </div>
+
+
+            <div class="timeline-item">
+                <span class="year">TODAY</span>
+
+                <div class="circle"></div>
+
+                <h3>TIMELESS FUTURE</h3>
+
+                <p>
+                    We continue to merge heritage with
+                    modern innovation and contemporary design.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+    <!-- contact us -->
+     <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-info">
+
+            <span class="small-title">CONTACT ALBERTO</span>
+
+            <h2>
+                WE ARE HERE
+                <span>FOR YOU.</span>
+            </h2>
+
+            <p class="intro">
+                Discover a more personal approach to luxury watchmaking.
+                Contact our specialists for guidance, appointments and
+                after-sales assistance.
+            </p>
+
+
+            <!-- CONTACT ITEM -->
+
+            <div class="info-box">
+
+                <div class="icon">
+                    01
+                </div>
+
+                <div>
+                    <h3>EMAIL</h3>
+                    <p>concierge@alberto.com</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="icon">
+                    02
+                </div>
+
+                <div>
+                    <h3>PHONE</h3>
+                    <p>+92 21 0000 0000</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="icon">
+                    03
+                </div>
+
+                <div>
+                    <h3>SHOWROOM</h3>
+                    <p>Luxury Avenue, Karachi</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="icon">
+                    04
+                </div>
+
+                <div>
+                    <h3>OPENING HOURS</h3>
+                    <p>Mon — Sat &nbsp; 11:00 — 20:00</p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- RIGHT SIDE -->
+
+        <div class="contact-form-box">
+<form id="contactForm" novalidate>
+
+    <div class="input-row">
+
+        <!-- NAME -->
+        <div class="input-group">
+
+            <label>YOUR NAME</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+            >
+
+            <small class="error-message" id="nameError"></small>
+
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="input-group">
+
+            <label>EMAIL ADDRESS</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+            >
+
+            <small class="error-message" id="emailError"></small>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECT -->
+    <div class="input-group">
+
+        <label>SUBJECT</label>
+
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What is your enquiry about?"
+        >
+
+        <small class="error-message" id="subjectError"></small>
+
+    </div>
+
+
+    <!-- MESSAGE -->
+    <div class="input-group">
+
+        <label>MESSAGE</label>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+        ></textarea>
+
+        <small class="error-message" id="messageError"></small>
+
+    </div>
+
+
+    <button type="submit">
+        SEND MESSAGE
+        <span>→</span>
+    </button>
+
+    <!-- SUCCESS MESSAGE -->
+    <p class="success-message" id="successMessage"></p>
+
+</form>
+</div>
+    </section>
+<!-- <footer> -->
+    <footer class="alberto-footer">
+
+    <!-- Decorative watch image -->
+    <div class="watch-visual"></div>
+    <div class="footer-glow"></div>
+
+    <!-- MAIN FOOTER -->
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="brand-logo">
+                <h2>ALBERTO</h2>
+
+                <div class="logo-caption">
+                    <span></span>
+                    <small>LUXURY WATCHES</small>
+                    <span></span>
+                </div>
+            </a>
+
+            <p class="brand-description">
+                Timeless craftsmanship. Modern pursuit.
+                We create luxury watches for those who value
+                precision, heritage and a better tomorrow.
+            </p>
+
+            <!-- NEWSLETTER -->
+            <div class="newsletter">
+                <h6>STAY IN TOUCH</h6>
+
+                <p>
+                    Discover new collections, exclusive releases
+                    and stories of fine craftsmanship.
+                </p>
+
+                <form id="newsletterForm">
+                    <div class="newsletter-box">
+
+                        <input type="email"
+                               id="email"
+                               placeholder="Your email address"
+                               aria-label="Your email address"
+                               required>
+
+                        <button type="submit" aria-label="Subscribe">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </form>
+
+                <small id="newsletterMsg" aria-live="polite"></small>
+            </div>
+
+        </div>
+
+
+        <!-- WATCHES -->
+        <div class="footer-column">
+            <div class="column-heading">
+                <span></span>
+                <h5>WATCHES</h5>
+            </div>
+
+            <a href="category.html?type=men">Men's Watches</a>
+            <a href="category.html?type=women">Women's Watches</a>
+            <a href="category.html?type=automatic">Automatic</a>
+            <a href="category.html?type=chronograph">Chronograph</a>
+            <a href="category.html?type=sport">Sport</a>
+            <a href="category.html?type=limited">Limited Editions</a>
+        </div>
+
+
+        <!-- COLLECTIONS -->
+        <div class="footer-column">
+            <div class="column-heading">
+                <span></span>
+                <h5>COLLECTIONS</h5>
+            </div>
+
+            <a href="brands.html#heritage">Heritage</a>
+            <a href="brands.html#aurelia">Aurelia</a>
+            <a href="brands.html#vanguard">Vanguard</a>
+            <a href="brands.html#classic">Classic</a>
+            <a href="brands.html#sport-elite">Sport Elite</a>
+            <a href="brands.html#signature">Signature</a>
+        </div>
+
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="footer-column">
+            <div class="column-heading">
+                <span></span>
+                <h5>SERVICE</h5>
+            </div>
+
+            <a href="contact.html">Customer Care</a>
+            <a href="contact.html#repair">Service &nbsp; Repair</a>
+            <a href="contact.html#warranty">Warranty</a>
+            <a href="contact.html#shipping">Shipping Delivery</a>
+            <a href="contact.html#returns">Returns Exchanges</a>
+            <a href="contact.html#faq">Frequently Asked Questions</a>
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+            <div class="column-heading">
+                <span></span>
+                <h5>COMPANY</h5>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="about.html#heritage">Our Heritage</a>
+            <a href="about.html#sustainability">Sustainability</a>
+            <a href="careers.html">Careers</a>
+            <a href="news.html">News Press</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="store.html">Store Locator</a>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p class="copyright">
+        2026 ALBERTO. All rights reserved.
+        </p>
+
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span></span>
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="social-icons">
+
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://x.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="X" title="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.youtube.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="YouTube" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="LinkedIn" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+
+        <!-- LANGUAGE AND CURRENCY -->
+        <div class="footer-settings">
+
+            <label>
+                <i class="fa-solid fa-globe"></i>
+
+                <select id="languageSelect" aria-label="Choose language">
+                    <option value="EN">EN</option>
+                    <option value="FR">FR</option>
+                    <option value="IT">IT</option>
+                </select>
+            </label>
+
+            <span class="settings-divider"></span>
+
+            <label>
+                <select id="currencySelect" aria-label="Choose currency">
+                    <option value="USD">$ USD</option>
+                    <option value="EUR">€ EUR</option>
+                    <option value="GBP">£ GBP</option>
+                    <option value="PKR">Rs PKR</option>
+                </select>
+            </label>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    
+       /* MOBILE MENU TOGGLE FUNCTION */
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    
+    // Toggle hidden class
+    mobileMenu.classList.toggle('hidden');
+    
+    // Toggle Icon between Bars and Cross (X)
+    if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+    }
+}
+
+/* MOBILE SUB-MENU DROPDOWN ACCORDION */
+function toggleMobileSubmenu(submenuId) {
+    const submenu = document.getElementById(submenuId);
+    if (submenu) {
+        submenu.classList.toggle('hidden');
+    }
+}
+
+        /* CAROUSEL LOGIC */
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.slide-indicator');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (indicators[i]) {
+                    indicators[i].classList.replace('w-8', 'w-3');
+                    indicators[i].classList.replace('bg-[#d8b477]', 'bg-gray-600');
+                }
+            });
+            slides[index].classList.add('active');
+            if (indicators[index]) {
+                indicators[index].classList.replace('w-3', 'w-8');
+                indicators[index].classList.replace('bg-gray-600', 'bg-[#d8b477]');
+            }
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        /* AUTO SLIDE CAROUSEL EVERY 6 SECONDS */
+        setInterval(nextSlide, 6000);
+
+        /* PRODUCT FILTER (Brands / Category from navbar) */
+function normKey(s){ return (s||'').toLowerCase().replace(/[^a-z]/g,''); }
+function closeMobileMenu(){
+    const m = document.getElementById('mobile-menu');
+    if (m && !m.classList.contains('hidden')) toggleMobileMenu();
+}
+function filterProducts(type, value){
+    const cards = document.querySelectorAll('#product-grid .luxury-card');
+    const key = normKey(value);
+    let shown = 0;
+    cards.forEach(card => {
+        let match = true;
+        if (type === 'brand') match = normKey(card.dataset.brand) === key;
+        else if (type === 'category') {
+            match = (key === 'mens' || key === 'womens')
+                ? normKey(card.dataset.gender) === key
+                : normKey(card.dataset.category) === key;
+        }
+        const col = card.closest('[class*="col-"]');
+        col.style.display = match ? '' : 'none';
+        if (match) shown++;
+    });
+    const bar = document.getElementById('filter-status');
+    if (type === 'all' || !value) {
+        bar.style.display = 'none';
+    } else {
+        bar.style.display = 'flex';
+        document.getElementById('filter-label').textContent =
+            (type === 'brand' ? 'Brand: ' : 'Category: ') + value + ' (' + shown + ' watches)';
+    }
+    document.getElementById('collections').scrollIntoView({behavior:'smooth', block:'start'});
+}
+function filterCategory(c){ filterProducts('category', c); }
+
+// Wishlist Toggle Functionality
+document.querySelectorAll('.wishlist-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const icon = this.querySelector('i');
+        
+        // Toggle Heart Icon between Solid and Outline
+        if (icon.classList.contains('fa-regular')) {
+            icon.classList.remove('fa-regular');
+            icon.classList.add('fa-solid');
+            icon.style.color = '#d8a06f'; // Highlighted color
+        } else {
+            icon.classList.remove('fa-solid');
+            icon.classList.add('fa-regular');
+            icon.style.color = ''; // Reset to CSS default
+        }
+    });
+});
+
+
+
+/* ===== ALBERTO WATCH PRODUCT MODAL ===== */
+const productInfo = {"1": {"category": "Luxury", "brand": "Royal", "name": "Royal Master Chronograph", "price": "$12,400", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/a2957e4e-15dc-4e5a-8526-9127a626e41c.png"}, "2": {"category": "Luxury", "brand": "Royal", "name": "Royal Gold Skeleton", "price": "$15,800", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/classic-watches-day-date-naviguation-square.avif"}, "3": {"category": "Luxury", "brand": "Royal", "name": "Royal Heritage Automatic", "price": "$11,950", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/1100112246_PREVIEW.jfif"}, "4": {"category": "Luxury", "brand": "Michael Kors", "name": "Michael Kors Runway Gold", "price": "$395", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/images.jfif"}, "5": {"category": "Luxury", "brand": "Michael Kors", "name": "Michael Kors Lexington", "price": "$425", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/Michael-Kors-Women-s-Slim-Runway-Gold-Tone-Watch-42mm-MK3179_fc008235-0874-47f4-a161-3405462e3f72.a6869ce7c2d6659b57db947cca99e0e6.avif"}, "6": {"category": "Luxury", "brand": "Michael Kors", "name": "Michael Kors Parker Elite", "price": "$450", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/WhatsApp_Image_2025-12-06_at_3.16.24_PM_2.jpg"}, "7": {"category": "Luxury", "brand": "Omega", "name": "Omega Seamaster Classic", "price": "$7,900", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/images (1).jfif"}, "8": {"category": "Luxury", "brand": "Omega", "name": "Omega Speedmaster Noir", "price": "$8,750", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/images (5).jfif"}, "9": {"category": "Luxury", "brand": "Omega", "name": "Omega Constellation Gold", "price": "$10,900", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A refined luxury timepiece with premium finishing, an elegant dial and a distinctive Alberto Watches presentation.", "image": "images/images (4).jfif"}, "10": {"category": "Vintage", "brand": "Casio", "name": "Casio Vintage Digital", "price": "$95", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/a168WA-1wd-digital-alram-watch.jpg"}, "11": {"category": "Vintage", "brand": "Casio", "name": "Casio Vintage Gold", "price": "$125", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (3).jfif"}, "12": {"category": "Vintage", "brand": "Casio", "name": "Casio Retro Classic", "price": "$110", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (2).jfif"}, "13": {"category": "Vintage", "brand": "Seiko", "name": "Seiko Presage Classic", "price": "$520", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/ypewst7wpdrh-k1k0cpzpvkql3c5l4ntejt8u-ExtraLarge.jpg"}, "14": {"category": "Vintage", "brand": "Seiko", "name": "Seiko 5 Automatic", "price": "$390", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (7).jfif"}, "15": {"category": "Vintage", "brand": "Seiko", "name": "Seiko Heritage Silver", "price": "$475", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (6).jfif"}, "16": {"category": "Vintage", "brand": "Tissot", "name": "Tissot PRX Classic", "price": "$695", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (8).jfif"}, "17": {"category": "Vintage", "brand": "Tissot", "name": "Tissot Le Locle", "price": "$780", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (9).jfif"}, "18": {"category": "Vintage", "brand": "Tissot", "name": "Tissot Gentleman", "price": "$725", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A timeless design inspired by classic watchmaking, with a refined dial and heritage character.", "image": "images/images (10).jfif"}, "19": {"category": "Essential", "brand": "Citizen", "name": "Citizen Eco-Drive", "price": "$395", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (11).jfif"}, "20": {"category": "Essential", "brand": "Citizen", "name": "Citizen Tsuyosa", "price": "$450", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (12).jfif"}, "21": {"category": "Essential", "brand": "Citizen", "name": "Citizen Classic Date", "price": "$375", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (13).jfif"}, "22": {"category": "Essential", "brand": "Bulova", "name": "Bulova Classic Automatic", "price": "$575", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (14).jfif"}, "23": {"category": "Essential", "brand": "Bulova", "name": "Bulova Marine Star", "price": "$625", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (15).jfif"}, "24": {"category": "Essential", "brand": "Bulova", "name": "Bulova Sutton Gold", "price": "$550", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (16).jfif"}, "25": {"category": "Essential", "brand": "Orient", "name": "Orient Bambino Classic", "price": "$310", "rating": 4.8, "limited": true, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (17).jfif"}, "26": {"category": "Essential", "brand": "Orient", "name": "Orient Kamasu Automatic", "price": "$375", "rating": 4.9, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (18).jfif"}, "27": {"category": "Essential", "brand": "Orient", "name": "Orient Contemporary", "price": "$340", "rating": 4.7, "limited": false, "movement": "Automatic Swiss Movement", "description": "A dependable everyday timepiece combining clean styling, comfort and practical luxury.", "image": "images/images (19).jfif"}, "28": {"category": "Smartwatches", "brand": "Apple", "name": "Apple Watch Series", "price": "$499", "rating": 4.8, "limited": true, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (20).jfif"}, "29": {"category": "Smartwatches", "brand": "Apple", "name": "Apple Watch Ultra", "price": "$799", "rating": 4.9, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (21).jfif"}, "30": {"category": "Smartwatches", "brand": "Apple", "name": "Apple Watch Classic", "price": "$449", "rating": 4.7, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (22).jfif"}, "31": {"category": "Smartwatches", "brand": "Huawei", "name": "Huawei Watch GT", "price": "$299", "rating": 4.8, "limited": true, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (25).jfif"}, "32": {"category": "Smartwatches", "brand": "Huawei", "name": "Huawei Watch Elegant", "price": "$329", "rating": 4.9, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (24).jfif"}, "33": {"category": "Smartwatches", "brand": "Huawei", "name": "Huawei Watch Pro", "price": "$399", "rating": 4.7, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (23).jfif"}, "34": {"category": "Smartwatches", "brand": "TAG Heuer", "name": "TAG Heuer Connected", "price": "$1,850", "rating": 4.8, "limited": true, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (26).jfif"}, "35": {"category": "Smartwatches", "brand": "TAG Heuer", "name": "TAG Heuer Connected Sport", "price": "$2,050", "rating": 4.9, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (27).jfif"}, "36": {"category": "Smartwatches", "brand": "TAG Heuer", "name": "TAG Heuer Connected Elite", "price": "$2,250", "rating": 4.7, "limited": false, "movement": "Smart Quartz Movement", "description": "A modern connected timepiece combining contemporary watch design with smart everyday functionality.", "image": "images/images (28).jfif"}};
+let selectedProductId = 0;
+let selectedFeedbackRating = 0;
+
+function openProductModal(id) {
+    const p = productInfo[String(id)];
+    if (!p) return;
+    selectedProductId = id;
+    document.getElementById("modalProductImage").src = p.image;
+    document.getElementById("modalProductImage").alt = p.name;
+    document.getElementById("modalProductCategory").textContent = p.category;
+    document.getElementById("modalProductBrand").textContent = p.brand;
+    document.getElementById("modalProductCollection").textContent = p.category;
+    document.getElementById("modalProductTitle").textContent = p.name;
+    document.getElementById("modalProductPrice").textContent = p.price;
+    document.getElementById("modalProductMovement").textContent = p.movement;
+    document.getElementById("modalProductDescription").textContent = p.description;
+    const badge=document.getElementById("modalProductBadge");
+    badge.textContent=p.limited ? "Limited Edition" : "";
+    badge.style.display=p.limited ? "inline-block" : "none";
+    document.getElementById("modalProductRating").innerHTML =
+      '<span class="modal-stars">' +
+      '<i class="fa-solid fa-star"></i>'.repeat(Math.floor(p.rating)) +
+      (p.rating%1>=.5?'<i class="fa-solid fa-star-half-stroke"></i>':'') +
+      '</span> ('+p.rating.toFixed(1)+')';
+    const modal=document.getElementById("productModal");
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden","false");
+    document.body.classList.add("modal-open-custom");
+}
+
+function closeProductModal(){
+    document.getElementById("productModal").classList.remove("show");
+    document.getElementById("productModal").setAttribute("aria-hidden","true");
+    if(!document.getElementById("feedbackModal").classList.contains("show"))
+        document.body.classList.remove("modal-open-custom");
+}
+
+document.getElementById("modalAddButton").addEventListener("click",function(){
+    this.innerHTML='<i class="fa-solid fa-check"></i> Added to Bag';
+    this.classList.add("added");
+    setTimeout(()=>{this.innerHTML='<i class="fa-solid fa-bag-shopping"></i> Add to Bag';this.classList.remove("added")},1500);
+});
+
+function openFeedbackModal(){
+    document.getElementById("productModal").classList.remove("show");
+    document.getElementById("productModal").setAttribute("aria-hidden","true");
+    const p=productInfo[String(selectedProductId)];
+    document.getElementById("feedbackProductName").textContent=p?p.name:"Selected Watch";
+    selectedFeedbackRating=0;
+    document.querySelectorAll("#feedbackStars button").forEach(b=>b.classList.remove("selected"));
+    document.getElementById("feedbackText").value="";
+    document.getElementById("feedbackModal").classList.add("show");
+    document.getElementById("feedbackModal").setAttribute("aria-hidden","false");
+}
+function closeFeedbackModal(){
+    document.getElementById("feedbackModal").classList.remove("show");
+    document.getElementById("feedbackModal").setAttribute("aria-hidden","true");
+    document.body.classList.remove("modal-open-custom");
+}
+document.querySelectorAll("#feedbackStars button").forEach(b=>b.addEventListener("click",function(){
+    selectedFeedbackRating=Number(this.dataset.rating);
+    document.querySelectorAll("#feedbackStars button").forEach(x=>x.classList.toggle("selected",Number(x.dataset.rating)<=selectedFeedbackRating));
+}));
+function submitFeedback(){
+    if(!selectedFeedbackRating || !document.getElementById("feedbackText").value.trim()){alert("Please select a rating and write your feedback.");return;}
+    alert("Thank you for your feedback!");
+    closeFeedbackModal();
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeFeedbackModal();closeProductModal();}});
+
+/* STORE DATA */
+
+const stores = {
+
+  karachi:{
+    name:"Alberto Karachi",
+    address:"Clifton • Dolmen Mall<br>Monday — Sunday · 10:00 — 22:00",
+    lat:24.8138,
+    lng:67.0305
+  },
+
+
+  lahore:{
+    name:"Alberto Lahore",
+    address:"Gulberg • MM Alam Road<br>Monday — Sunday · 10:00 — 22:00",
+    lat:31.5204,
+    lng:74.3587
+  },
+
+
+  islamabad:{
+    name:"Alberto Islamabad",
+    address:"F-7 • Jinnah Super<br>Monday — Sunday · 10:00 — 22:00",
+    lat:33.6844,
+    lng:73.0479
+  },
+
+
+  dubai:{
+    name:"Alberto Dubai",
+    address:"Downtown • Dubai Mall<br>Monday — Sunday · 10:00 — 22:00",
+    lat:25.1972,
+    lng:55.2744
+  },
+
+
+  nigeria:{
+    name:"Alberto Nigeria",
+    address:"106 Close, Banana Island, Eti Osa 101003, Lagos",
+    lat:6.4281,
+    lng:3.4219
+  }
+
+};
+
+
+/* CURRENT STORE */
+
+let selectedStore = "karachi";
+
+
+/* SELECT STORE */
+
+function selectStore(city){
+
+  const store = stores[city];
+
+  if(!store) return;
+
+  selectedStore = city;
+
+
+  /* Change map */
+
+  document.getElementById("mapFrame").src =
+    `https://www.google.com/maps?q=${store.lat},${store.lng}&z=15&output=embed`;
+
+
+  /* Change information */
+
+  document.getElementById("storeName").innerHTML =
+    store.name;
+
+  document.getElementById("storeAddress").innerHTML =
+    store.address;
+
+}
+
+
+/* GET DIRECTIONS */
+
+function getDirections(){
+
+  const store = stores[selectedStore];
+
+  if(!store) return;
+
+  const url =
+    `https://www.google.com/maps/dir/?api=1&destination=${store.lat},${store.lng}`;
+
+  window.open(url,"_blank");
+
+}
+
+
+/* SEARCH */
+
+function searchStores(value){
+
+  value = value.toLowerCase();
+
+  document.querySelectorAll(".store").forEach(store => {
+
+    const text = store.innerText.toLowerCase();
+
+    store.style.display =
+      text.includes(value)
+      ? "block"
+      : "none";
+
+  });
+
+}
+/* =========================
+   FILTER SYSTEM
+========================= */
+
+const filters = document.querySelectorAll(".filter");
+const products = document.querySelectorAll(".product-card");
+
+filters.forEach(filter => {
+
+    filter.addEventListener("click", () => {
+
+        filters.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        filter.classList.add("active");
+
+        const category = filter.dataset.filter;
+
+        products.forEach(product => {
+
+            if (
+                category === "all" ||
+                product.classList.contains(category)
+            ) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =========================
+   IMAGE SLIDER
+========================= */
+
+const images = [
+    "images/watch-main.jpg",
+    "images/watch-2.jpg",
+    "images/watch-3.jpg",
+    "images/watch-4.jpg",
+    "images/watch-5.jpg"
+];
+
+let currentImage = 0;
+
+const featuredImage =
+    document.getElementById("featuredImage"); // may not exist on this page
+
+const thumbnails =
+    document.querySelectorAll(".thumb");
+
+
+function changeImage(index) {
+
+    currentImage = index;
+    if (!featuredImage) return;
+
+    featuredImage.style.opacity = "0";
+
+    setTimeout(() => {
+
+        featuredImage.src = images[index];
+
+        featuredImage.style.opacity = "1";
+
+    }, 200);
+
+
+    thumbnails.forEach(thumb =>
+        thumb.classList.remove("active")
+    );
+
+    if (thumbnails[index]) {
+        thumbnails[index].classList.add("active");
+    }
+}
+
+
+function nextImage() {
+
+    currentImage++;
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    changeImage(currentImage);
+}
+
+
+function previousImage() {
+
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    changeImage(currentImage);
+}
+
+
+/* =========================
+   AUTO SLIDER
+========================= */
+
+if (featuredImage) {
+    setInterval(() => {
+        nextImage();
+    }, 5000);
+}
+
+
+/* =========================
+   WISHLIST
+========================= */
+
+function toggleWishlist(button) {
+
+    button.classList.toggle("liked");
+
+    if (button.classList.contains("liked")) {
+
+        button.innerHTML = "♥ ADDED TO WISHLIST";
+
+    } else {
+
+        button.innerHTML = "♡ ADD TO WISHLIST";
+
+    }
+
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart() {
+
+    const message =
+        document.getElementById("cartMessage");
+    if (!message) return;
+
+    message.classList.add("show");
+
+    setTimeout(() => {
+
+        message.classList.remove("show");
+
+    }, 2500);
+
+}
+
+
+/* =========================
+   HERO SCROLL
+========================= */
+
+function scrollToGallery() {
+
+    const g = document.getElementById("gallery");
+    if (g) g.scrollIntoView({ behavior: "smooth" });
+
+}
+
+
+/* =========================
+   PRODUCT OPEN
+========================= */
+
+function openProduct(product) {
+    const f = document.querySelector(".featured");
+    if (f) f.scrollIntoView({ behavior: "smooth" });
+}
+
+
+/* =========================
+   IMAGE FADE
+========================= */
+
+if (featuredImage) {
+    featuredImage.style.transition = "opacity .2s ease";
+}
+
+// ================= CONTACT FORM VALIDATION =================
+
+const form = document.getElementById("contactForm");
+
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject");
+const messageInput = document.getElementById("message");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const subjectError = document.getElementById("subjectError");
+const messageError = document.getElementById("messageError");
+
+const successMessage = document.getElementById("successMessage");
+
+
+// ================= NAME VALIDATION =================
+
+function validateName() {
+
+    const name = nameInput.value.trim();
+
+    if (name === "") {
+
+        nameError.textContent = "Please enter your name.";
+        nameInput.classList.add("input-error");
+
+        return false;
+    }
+
+    if (name.length < 3) {
+
+        nameError.textContent = "Name must be at least 3 characters.";
+        nameInput.classList.add("input-error");
+
+        return false;
+    }
+
+    if (!/^[A-Za-z ]+$/.test(name)) {
+
+        nameError.textContent = "Name can only contain letters.";
+        nameInput.classList.add("input-error");
+
+        return false;
+    }
+
+    nameError.textContent = "";
+    nameInput.classList.remove("input-error");
+
+    return true;
+}
+
+
+// ================= EMAIL VALIDATION =================
+
+function validateEmail() {
+
+    const email = emailInput.value.trim();
+
+    if (email === "") {
+
+        emailError.textContent = "Please enter your email address.";
+        emailInput.classList.add("input-error");
+
+        return false;
+    }
+
+    const emailPattern =
+        /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (!emailPattern.test(email)) {
+
+        emailError.textContent =
+            "Please enter a valid email address.";
+
+        emailInput.classList.add("input-error");
+
+        return false;
+    }
+
+    emailError.textContent = "";
+    emailInput.classList.remove("input-error");
+
+    return true;
+}
+
+
+// ================= SUBJECT VALIDATION =================
+
+function validateSubject() {
+
+    const subject = subjectInput.value.trim();
+
+    if (subject === "") {
+
+        subjectError.textContent =
+            "Please enter a subject.";
+
+        subjectInput.classList.add("input-error");
+
+        return false;
+    }
+
+    if (subject.length < 5) {
+
+        subjectError.textContent =
+            "Subject must be at least 5 characters.";
+
+        subjectInput.classList.add("input-error");
+
+        return false;
+    }
+
+    subjectError.textContent = "";
+    subjectInput.classList.remove("input-error");
+
+    return true;
+}
+
+
+// ================= MESSAGE VALIDATION =================
+
+function validateMessage() {
+
+    const message = messageInput.value.trim();
+
+    if (message === "") {
+
+        messageError.textContent =
+            "Please write your message.";
+
+        messageInput.classList.add("input-error");
+
+        return false;
+    }
+
+    if (message.length < 10) {
+
+        messageError.textContent =
+            "Message must be at least 10 characters.";
+
+        messageInput.classList.add("input-error");
+
+        return false;
+    }
+
+    messageError.textContent = "";
+    messageInput.classList.remove("input-error");
+
+    return true;
+}
+
+
+// ================= LIVE VALIDATION =================
+
+nameInput.addEventListener("input", validateName);
+
+emailInput.addEventListener("input", validateEmail);
+
+subjectInput.addEventListener("input", validateSubject);
+
+messageInput.addEventListener("input", validateMessage);
+
+
+// ================= FORM SUBMIT =================
+
+form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const validName = validateName();
+    const validEmail = validateEmail();
+    const validSubject = validateSubject();
+    const validMessage = validateMessage();
+
+
+    // Remove old success message
+    successMessage.textContent = "";
+
+
+    // Check all fields
+    if (
+        validName &&
+        validEmail &&
+        validSubject &&
+        validMessage
+    ) {
+
+        successMessage.textContent =
+            "Thank you! Your message has been sent successfully.";
+
+        form.reset();
+
+        nameInput.classList.remove("input-error");
+        emailInput.classList.remove("input-error");
+        subjectInput.classList.remove("input-error");
+        messageInput.classList.remove("input-error");
+
+    }
+
+});
+
+/* ================= VISITOR COUNTER ================= */
+(function () {
+  var NAMESPACE = "alberto-watches";   // apna unique naam rakh sakte ho
+  var KEY = "visitors";
+  var el = document.getElementById("visitor-count");
+  var pill = document.getElementById("visitor-pill");
+  if (!el || !pill) return;
+
+  function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function show(n) {
+    el.textContent = Number(n).toLocaleString("en-US");
+    pill.style.display = "flex";
+    store("alberto_visitors_cache", n);
+  }
+
+  // Har browser sirf ek baar count hota hai (refresh par number nahi barhta)
+  var already = read("alberto_counted") === "1";
+  var url = "https://abacus.jasoncameron.dev/" + (already ? "get/" : "hit/") + NAMESPACE + "/" + KEY;
+
+  fetch(url)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      if (typeof d.value !== "number") throw new Error("bad response");
+      show(d.value);
+      if (!already) store("alberto_counted", "1");
+    })
+    .catch(function () {
+      var cached = read("alberto_visitors_cache");
+      if (cached) show(cached);   // API na chale to pichla number dikhao, warna pill chhupi rehti hai
+    });
+})();
+
+$(document).ready(function () {
+
+    // Newsletter form
+    $("#newsletterForm").on("submit", function (event) {
+        event.preventDefault();
+
+        const email = $("#email").val().trim();
+        const message = $("#newsletterMsg");
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            message.text("Please enter a valid email address.");
+            return;
+        }
+
+        // Front-end confirmation only.
+        // A mailing service/backend is needed to save subscriptions.
+        message.text("Thank you! Your email has been validated.");
+        $("#email").val("");
+    });
+
+
+    // Save visitor's selected language for this browser session
+    $("#languageSelect").on("change", function () {
+        const language = $(this).val();
+
+        try {
+            sessionStorage.setItem("albertoLanguage", language);
+        } catch (error) {
+            // The selector still works if storage is unavailable.
+        }
+    });
+
+    // Save visitor's selected currency for this browser session
+    $("#currencySelect").on("change", function () {
+        const currency = $(this).val();
+
+        try {
+            sessionStorage.setItem("albertoCurrency", currency);
+        } catch (error) {
+            // The selector still works if storage is unavailable.
+        }
+    });
+
+    // Restore selections during the current browser session
+    try {
+        const savedLanguage = sessionStorage.getItem("albertoLanguage");
+        const savedCurrency = sessionStorage.getItem("albertoCurrency");
+
+        if (savedLanguage) {
+            $("#languageSelect").val(savedLanguage);
+        }
+
+        if (savedCurrency) {
+            $("#currencySelect").val(savedCurrency);
+        }
+    } catch (error) {
+        // Defaults remain selected.
+    }
+
+});
+
+
+</script>
+</body>
+</html>
